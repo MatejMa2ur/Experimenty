@@ -1,7 +1,7 @@
 # Experimenty
 Toto bola uloha v skole. Test prace s WPF.
 
-#Zadanie od vyučujúceho bolo:
+# Zadanie od vyučujúceho bolo:
 1.Vytvorte JavaFX aplikáciu s popisom v titulnej lište "JavaFX experimenty"
 Rozmery okna nastavte na 1000x800 bodov
 Základný GridPane bude mať 4 riadky a 5 stĺpcov panelov. Prvé štyri stĺpce budú mať šírku 22% a prvé tri riadky výšku 30%, čiary medzi stĺpcami a riadkami hrúbku 1 pixel.
