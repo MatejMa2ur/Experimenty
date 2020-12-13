@@ -7,11 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Img\Final.png" />
     <None Remove="Img\Surface.jpg" />
     <None Remove="ReadMe.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Img\Final.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Img\Surface.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
