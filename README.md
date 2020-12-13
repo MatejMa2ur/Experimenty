@@ -43,4 +43,4 @@ indikované "fajkou" vedľa popisu v Menu.
 14.Vytvorte nové okno, na jeho panel vložte prvok TextArea a v ňom zabezpečte zobrazenie súboru návod.txt. Okno s návodom nech sa zobrazí kliknutím na položku Návod v menu z úlohy 9. Zistite,
  načo je dobrá modalita a aký je rozdiel medzi metódou show a showAndWait. Výsledky zistenia zapíšte do návodu.
 
-![Final](Img/Final.jpg)
+![Final](Img/Final.png)
