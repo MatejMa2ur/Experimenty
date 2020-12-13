@@ -1,0 +1,18 @@
+﻿<Window x:Class="Experimenty.Navod"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Experimenty"
+        mc:Ignorable="d"
+        Title="Navod" Height="300" Width="400">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel>
+            <TextBlock Margin="10" TextWrapping="Wrap" x:Name="NavodText"
+                       ScrollViewer.VerticalScrollBarVisibility="Visible" Width="355">
+
+            </TextBlock>
+        </StackPanel>
+    </ScrollViewer>
+    
+</Window>

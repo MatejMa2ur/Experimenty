@@ -1,0 +1,170 @@
+﻿<Window x:Class="Experimenty.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Experimenty"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="22*" />
+            <ColumnDefinition Width="1"/>
+            <ColumnDefinition Width="22*" />
+            <ColumnDefinition Width="1"/>
+            <ColumnDefinition Width="22*" />
+            <ColumnDefinition Width="1"/>
+            <ColumnDefinition Width="22*" />
+            <ColumnDefinition Width="1"/>
+            <ColumnDefinition Width="12*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Border x:Name="uloha2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Button Content="Zvacsi" x:Name="zvacsi"/>
+                <Button Content="Zmensi" x:Name="zmensi"
+                    Grid.Row="1"/>
+                <Label Content="Ahoj" x:Name="ahoj"
+                       HorizontalContentAlignment="Center"
+                       VerticalContentAlignment="Center"
+                       Grid.Row="2"/>
+            </Grid>
+        </Border>
+
+        <Canvas Grid.Column="2" x:Name="uloha3">
+            <Ellipse Height="55" Width="55" Canvas.Left="82" Canvas.Top="52" Fill="Gray"
+                     x:Name="kruh"/>
+            <Button Height="80" Width="110" Canvas.Bottom="0" 
+                    x:Name="left" Content="Vľavo"/>
+            <Button Height="80" Width="110" Canvas.Right="0" Canvas.Bottom="0"
+                    x:Name="right" Content="Vpravo"/>
+        </Canvas>
+
+        <Canvas Grid.Column="4" x:Name="uloha4">
+            <Rectangle Height="96" Width="140" Canvas.Left="40" Canvas.Top="21" Stroke="Blue" StrokeThickness="3" Fill="Yellow"
+                       x:Name="rectang">
+            </Rectangle>
+            <Button Height="80" Canvas.Bottom="0" Canvas.Left="0" Width="219"
+                    x:Name="duha" Content="Dúha"/>
+        </Canvas>
+
+        <Canvas Grid.Column="6" x:Name="uloha5">
+
+            <Ellipse Height="55" Width="55" Canvas.Left="82" Canvas.Top="52" Fill="Gray" Stroke="Blue" StrokeThickness="3"
+                     x:Name="farebnyKruh"/>
+
+            <Slider Canvas.Top="171" Width="219" Height="29" Maximum="255" TickFrequency="1"
+                    x:Name="pick1"/>
+
+            <Slider Canvas.Top="205" Width="219" Height="29" Maximum="255" TickFrequency="1"
+                    x:Name="pick2"/>
+
+        </Canvas>
+
+        <Canvas Grid.Row="2" x:Name="uloha6">
+            <TextBox Height="35" Width="172" Canvas.Top="34" Canvas.Left="24" 
+                     x:Name="meno"/>
+            <PasswordBox Height="35" Width="172" Canvas.Left="24" Canvas.Top="82" 
+                         x:Name="heslo"/>
+            <Button Content="Skryť" Height="40" Margin="0,157,0,0" Grid.Row="2" Width="153"
+                x:Name="Divne" Canvas.Left="33" Canvas.Top="-11"/>
+        </Canvas>
+
+        <Canvas Grid.Row="2" Grid.Column="2" x:Name="uloha7">
+            <Rectangle Height="7" Width="25" Canvas.Left="10" Canvas.Top="72" Stroke="Gray" Visibility="Hidden"
+                       x:Name="naboj"/>
+            <Button Height="31" Width="76" Canvas.Left="72" Canvas.Top="193" Content="Strel"
+                    x:Name="Strelba"/>
+        </Canvas>
+
+        <Border Grid.Row="2" Grid.Column="4" x:Name="uloha9">
+            <Menu Height="64" Width="219" Margin="0,0,0,170">
+                <MenuItem Header="_Menu Panel">
+                    <MenuItem Header="_Duha" IsCheckable="True" x:Name="menuDuha" IsChecked="True"
+                              Checked="Duha_Checked"
+                              Unchecked="Duha_Unchecked"/>
+                    <MenuItem Header="_Kruh" IsCheckable="True" x:Name="menuKruh" IsChecked="True"
+                              Checked="Kruh_Checked"
+                              Unchecked="Kruh_Unchecked"/>
+                    <MenuItem Header="_Obrazok"
+                              Click="Obrazok_Clicked"/>
+                </MenuItem>
+                <MenuItem Header="_Navod" Height="63" Width="55" x:Name="NavodHeader">
+                </MenuItem>
+            </Menu>
+        </Border>
+
+        <Canvas Grid.Row="2" Grid.Column="6" x:Name="uloha10">
+            <Slider Height="21" Width="219" Minimum="0" Maximum="219" x:Name="HidWidthSet"
+                    TickFrequency="1"/>
+            <TextBox x:Name="HidWidth" Canvas.Left="70" Canvas.Top="94" Height="47" Width="80"
+                     TextAlignment="Center"
+                     VerticalContentAlignment="Center" Text=""/>
+        </Canvas>
+
+        <Border Grid.Row="4" x:Name="uloha11">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBox Grid.Row="0" VerticalAlignment="Center" x:Name="ul11Entry1"/>
+                    <TextBox Grid.Row="1" AcceptsReturn="True" x:Name="ul11Entry2"/>
+                </Grid>
+                <GridSplitter ResizeDirection="Columns" Grid.Column="1" HorizontalAlignment="Left" Width="1" x:Name="gridSplit"/>
+                <Border Grid.Column="1">
+                    <Ellipse Fill="LightYellow" x:Name="ul11Kruh"/>
+                </Border>
+            </Grid>
+
+        </Border>
+
+        <Border Grid.Row="4" Grid.Column="2" x:Name="uloha12">
+            <Image Source="/Img/Surface.jpg" x:Name="ul12Obrazok"/>
+        </Border>
+
+        <Border Grid.Row="4" Grid.Column="4" x:Name="uloha13">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10*"/>
+                </Grid.RowDefinitions>
+                <ComboBox Grid.Row="0">
+                    <ComboBoxItem x:Name="ul13Circle" Selected="ul13Circle_Selected">Circle</ComboBoxItem>
+                    <ComboBoxItem x:Name="ul13Rectangle" Selected="ul13Rectangle_Selected">Rectangle</ComboBoxItem>
+                </ComboBox>
+                <Ellipse Grid.Row="1" Fill="#282828" Margin="10" x:Name="ul13ItemCircle"/>
+                <Rectangle Grid.Row="1" Fill="#F0B215" Margin="10" x:Name="ul13ItemRect"/>
+            </Grid>
+        </Border>
+
+        <Border Grid.Column="1" Grid.RowSpan="8" Background="Black"/>
+        <Border Grid.Column="3" Grid.RowSpan="8" Background="Black"/>
+        <Border Grid.Column="5" Grid.RowSpan="8" Background="Black"/>
+        <Border Grid.Column="7" Grid.RowSpan="8" Background="Black"/>
+        <Border Grid.Row="1" Grid.ColumnSpan="9" Background="Black"/>
+        <Border Grid.Row="3" Grid.ColumnSpan="9" Background="Black"/>
+        <Border Grid.Row="5" Grid.ColumnSpan="9" Background="Black"/>
+    </Grid>
+</Window>
