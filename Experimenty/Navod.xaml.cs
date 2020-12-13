@@ -21,7 +21,15 @@ namespace Experimenty
         public Navod()
         {
             InitializeComponent();
-            NavodText.Text = File.ReadAllText("ReadMe.txt");
+            try
+            {
+                NavodText.Text = File.ReadAllText("ReadMe.txt");
+            }
+            catch(Exception e)
+            {
+                NavodText.Text = "!!!ReadMe súbor sa nenachádza v tom istom preičinku!!!";
+            }
+            
         }
     }
 }
